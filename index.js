@@ -56,7 +56,7 @@ app.get("/callback", async (req, res) => {
 
     // Store tokens in MongoDB
     const dbClient = await getClient();
-    const db = dbClient.db("spotify_bot");
+    const db = dbClient.db("Spotify");
 
     await db.collection("users").updateOne(
       { discordId },
